@@ -1,0 +1,659 @@
+{
+  "app": {
+    "title": "Work Hours Management System"
+  },
+  "auth": {
+    "logout": "Logout",
+    "lastLogin": "Last Login",
+    "userId": "User ID",
+    "noUserInfo": "No user information available",
+    "okta": {
+      "signIn": "Sign in with Okta",
+      "loginFailed": "Login failed"
+    }
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "workRecords": "Work Input",
+    "approval": "Approval Processing",
+    "approverManagement": "Approver Management",
+    "dailyApproval": "Daily Approval",
+    "developerApprovalStatus": "Approval Status",
+    "projects": "Projects",
+    "users": "User Management",
+    "supervisor": "Member Management",
+    "projectList": "Project List",
+    "assignments": "Assignments",
+    "admin": "Administration",
+    "adminSupervisors": "Supervisor Management",
+    "workRecordsAnalysis": "Work Records Analysis",
+    "jiraSync": "JIRA Sync",
+    "home": "Home",
+    "settings": "Settings",
+    "generalSettings": "General Settings",
+    "jiraSettings": "JIRA Integration",
+    "jira": {
+      "settings": "Connection Settings",
+      "templates": "Field Mapping",
+      "queries": "JQL",
+      "history": "Sync History"
+    }
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "loading": "Loading...",
+    "noData": "No data available",
+    "refresh": "Refresh",
+    "export": "Export",
+    "filter": "Filter",
+    "close": "Close",
+    "back": "Back",
+    "confirm": "Confirm",
+    "success": "Success",
+    "error": "An error occurred",
+    "warning": "Warning",
+    "info": "Information",
+    "date": "Date",
+    "status": "Status",
+    "created": "Created",
+    "actions": "Actions",
+    "total": "Total",
+    "searching": "Searching...",
+    "project": "Project"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "username": "Username",
+    "password": "Password",
+    "welcome": "Welcome"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "description": "Developer Dashboard",
+    "welcome": "Welcome, {name}",
+    "quickActions": "Quick Actions"
+  },
+  "workRecords": {
+    "title": "Work Records",
+    "description": "Record and manage daily work hours",
+    "todayHours": "Today's Hours",
+    "weekHours": "This Week's Hours",
+    "monthAverage": "Monthly Average",
+    "activeProjects": "Active Projects",
+    "today": "Today",
+    "thisWeek": "This Week", 
+    "avgInMonth": "Avg in Month",
+    "categories": {
+      "development": "Development",
+      "testing": "Testing",
+      "meeting": "Meeting",
+      "documentation": "Documentation",
+      "research": "Research",
+      "review": "Review"
+    },
+    "addProject": "Please add a project",
+    "noProjectSelected": "No project selected",
+    "selectProjectToAdd": "Select project to add",
+    "projectNotFound": "No projects found"
+  },
+  "workHours": {
+    "alreadyApproved": "Already Approved",
+    "warnings": {
+      "exceedTenHours": "Work hours exceed 10 hours for the day.",
+      "lessThanSevenHalf": "Work hours less than 7.5 hours for the day."
+    }
+  },
+  "approval": {
+    "title": "Approval",
+    "description": "Approve and manage subordinate work records",
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "overdue": "Overdue",
+    "pendingApproval": "Pending Approval",
+    "approvedThisMonth": "Approved This Month",
+    "unappliedThisMonth": "Unapplied This Month",
+    "members": "Members",
+    "noRecords": "No pending work records",
+    "noPendingApproval": "No pending approval",
+    "pendingApprovalList": "Pending",
+    "approvalHistory": "Approval History",
+    "userWorkRecords": "{userName}'s Work Records",
+    "categoryHours": "Category Hours",
+    "totalHours": "Total Hours",
+    "applicant": "Applicant",
+    "workDate": "Work Date",
+    "workTime": "Work Time",
+    "duration": "Duration",
+    "appliedAt": "Applied At",
+    "project": "Project",
+    "projects": "Projects",
+    "situation": "Status",
+    "action": "Action",
+    "actions": "Actions",
+    "details": "Details",
+    "approvalStatus": "Approval Status",
+    "approvalDetails": "Approval Details",
+    "rejectionConfirm": "Rejection Confirmation",
+    "rejectionReason": "Rejection Reason",
+    "rejectionReasonPlaceholder": "Please enter the reason for rejection...",
+    "rejectionReasonRequired": "Rejection reason is required",
+    "projectBreakdown": "Project Breakdown",
+    "description": "Description",
+    "actionsHeader": "Actions",
+    "user": "User",
+    "status": {
+      "notEntered": "Not Entered",
+      "pending": "Pending Approval",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "cancelled": "Cancelled",
+      "unknown": "Unknown",
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "actions": {
+      "_": "Actions",
+      "approve": "Approve",
+      "reject": "Reject",
+      "batchApprove": "Batch Approve",
+      "batchReject": "Batch Reject",
+      "bulkApprove": "Bulk Approve",
+      "bulkReject": "Bulk Reject"
+    },
+    "loading": {
+      "subordinates": "Loading subordinate information...",
+      "history": "Loading history..."
+    },
+    "empty": {
+      "noSubordinates": "No subordinates to manage",
+      "noSearchResults": "No search results found",
+      "changeSearchCondition": "Please change your search criteria",
+      "subordinatesWillAppear": "Subordinates will appear here when assigned",
+      "noHistoryInPeriod": "No approval history for the specified period",
+      "changePeriod": "Please change the period and search again"
+    },
+    "search": {
+      "nameOrDepartment": "Search by name or department...",
+      "searchHistory": "Search history..."
+    },
+    "dateRange": {
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "search": "Search",
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "thisWeek": "This Week",
+      "lastWeek": "Last Week",
+      "thisMonth": "This Month",
+      "lastMonth": "Last Month",
+      "last30Days": "Last 30 Days"
+    },
+    "messages": {
+      "approveSuccess": "Approved successfully",
+      "approveFailed": "Failed to approve",
+      "rejectSuccess": "Rejected {count} items",
+      "rejectFailed": "Failed to reject",
+      "batchApproveSuccess": "Batch approved {count} items",
+      "batchApproveFailed": "Failed to batch approve",
+      "batchRejectSuccess": "Rejected {count} work records",
+      "batchRejectFailed": "Failed to batch reject",
+      "fetchFailed": "Failed to fetch pending approval",
+      "fetchSubordinatesFailed": "Failed to fetch subordinate information",
+      "fetchHistoryFailed": "Failed to fetch history",
+      "selectPeriod": "Please select a period",
+      "csvDownloaded": "CSV file downloaded",
+      "rejectItems": "Reject {count} applications.",
+      "rejectWorkRecords": "Reject {count} work records."
+    },
+    "counts": {
+      "items": "{count} items",
+      "people": "{count} people",
+      "projects": "{count} projects",
+      "hours": "{hours} hours"
+    },
+    "table": {
+      "date": "Date",
+      "comment": "Comment/Reason",
+      "commentReason": "Comment/Reason",
+      "reasonForRejection": "Reason for Rejection"
+    },
+    "views": {
+      "table": "Table",
+      "timeline": "Timeline"
+    },
+    "export": {
+      "csv": "CSV"
+    },
+    "category": {
+      "summary": "Category Summary",
+      "noData": "No Data",
+      "total": "Total"
+    },
+    "relativeTime": {
+      "daysAgo": "{days} days ago",
+      "hoursAgo": "{hours} hours ago",
+      "minutesAgo": "{minutes} minutes ago"
+    },
+    "approver": {
+      "title": "Approver List",
+      "noApproversSet": "No approvers are set",
+      "contactAdmin": "Please contact administrator.",
+      "searchApprovers": "Search approvers",
+      "currentEffectiveCount": "Currently effective approvers: {count} people",
+      "approver": "Approver",
+      "effectivePeriod": "Effective Period",
+      "status": "Status",
+      "continuing": "~ Continuing",
+      "effective": "Effective",
+      "inactive": "Inactive",
+      "notFound": "No approvers found",
+      "loading": "Loading approver information..."
+    }
+  },
+  "projects": {
+    "title": "Project Management",
+    "description": "Project list and management functions",
+    "projectList": "Project List",
+    "newProject": "New Project",
+    "totalProjects": "Total Projects",
+    "activeProjects": "Active Projects", 
+    "completedProjects": "Completed Projects",
+    "status": {
+      "planning": "Planning",
+      "inProgress": "In Progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    }
+  },
+  "admin": {
+    "title": "Admin Dashboard",
+    "description": "System-wide KPIs and management functions",
+    "totalProjects": "Total Projects",
+    "activeProjects": "Active Projects",
+    "totalDevelopers": "Total Developers",
+    "totalHours": "Total Hours Consumed",
+    "quickActions": "Quick Actions",
+    "allProjects": "All Projects",
+    "reports": "Reports",
+    "supervisors": {
+      "title": "Supervisor Management",
+      "description": "Set up and manage employee-supervisor relationships",
+      "newAssignment": "New Assignment",
+      "totalEmployees": "Total Employees",
+      "totalSupervisors": "Total Supervisors"
+    }
+  },
+  "statistics": {
+    "pendingCount": "Pending Approval",
+    "approvedCount": "Approved",
+    "rejectedCount": "Rejected",
+    "totalDays": "Total Days"
+  },
+  "dates": {
+    "today": "Today",
+    "yesterday": "Yesterday", 
+    "thisWeek": "This Week",
+    "thisMonth": "This Month",
+    "lastMonth": "Last Month"
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Please enter a valid email address",
+    "minLength": "Please enter at least {min} characters",
+    "maxLength": "Maximum {max} characters allowed"
+  },
+  "developerApprovalStatus": {
+    "title": "Approval Status Check",
+    "description": "Check the approval status of your work records",
+    "calendar": {
+      "title": "Approval Status Calendar",
+      "monthYear": "{month} {year}",
+      "legend": {
+        "pending": "Pending",
+        "approved": "Approved",
+        "rejected": "Rejected"
+      },
+      "weekdays": {
+        "0": "Sun",
+        "1": "Mon",
+        "2": "Tue",
+        "3": "Wed",
+        "4": "Thu",
+        "5": "Fri",
+        "6": "Sat"
+      }
+    },
+    "selectedDate": {
+      "totalHours": "Total Hours",
+      "categoryHours": "Category Hours",
+      "rejectionReason": "Rejection Reason",
+      "projects": "Projects",
+      "noWorkRecords": "No work records for this day",
+      "hours": "{hours} hours"
+    },
+    "messages": {
+      "dataUpdated": "Data updated successfully",
+      "fetchFailed": "Failed to fetch data",
+      "exportSuccess": "Data exported successfully",
+      "exportFailed": "Failed to export data",
+      "detailsInsufficient": "Insufficient details"
+    },
+    "mockData": {
+      "development": "Development",
+      "testing": "Testing",
+      "meeting": "Meeting",
+      "projectA": "Project A",
+      "projectB": "Project B"
+    }
+  },
+  "adminSupervisors": {
+    "title": "Supervisor Management",
+    "description": "Set up and manage employee-supervisor relationships",
+    "newAssignment": "New Assignment",
+    "statistics": {
+      "totalEmployees": "Total Employees",
+      "totalSupervisors": "Total Supervisors",
+      "unassignedEmployees": "Unassigned"
+    },
+    "settings": {
+      "title": "Supervisor Settings",
+      "search": "Search..."
+    },
+    "hierarchy": {
+      "title": "Organization Hierarchy",
+      "noData": "No organizational hierarchy data available."
+    },
+    "supervisor": "Supervisor",
+    "dialog": {
+      "newAssignmentTitle": "New Supervisor Assignment",
+      "bulkAssignmentTitle": "Bulk Assignment",
+      "employee": "Employee",
+      "supervisor": "Supervisor",
+      "effectiveStartDate": "Effective Start Date",
+      "notes": "Notes",
+      "csvFile": "CSV File",
+      "preview": "Preview (First 5 items)",
+      "template": "Template",
+      "bulkRegister": "Bulk Register"
+    },
+    "table": {
+      "employeeId": "Employee ID",
+      "employeeName": "Employee Name",
+      "supervisorId": "Supervisor ID",
+      "supervisorName": "Supervisor Name",
+      "effectiveDate": "Effective Date"
+    },
+    "validation": {
+      "employeeRequired": "Please select an employee",
+      "supervisorRequired": "Please select a supervisor",
+      "effectiveDateRequired": "Please enter the effective start date"
+    },
+    "messages": {
+      "settingsUpdated": "Settings updated successfully",
+      "assignmentSaved": "Supervisor assignment saved successfully",
+      "dataExporting": "Exporting data...",
+      "templateDownloaded": "Template downloaded successfully",
+      "bulkProcessing": "Processing {count} assignments..."
+    },
+    "info": {
+      "csvUploadDescription": "Upload a CSV file to perform multiple supervisor assignments in bulk."
+    }
+  },
+  "projectList": {
+    "title": "Project List",
+    "newProject": "New Project",
+    "breadcrumbs": {
+      "home": "Home",
+      "projects": "Projects"
+    },
+    "filters": {
+      "search": "Search",
+      "status": "Status",
+      "all": "All"
+    },
+    "table": {
+      "projectName": "Project Name",
+      "status": "Status",
+      "period": "Period",
+      "actions": "Actions"
+    },
+    "details": {
+      "title": "Project Details",
+      "description": "Description",
+      "noDescription": "No description",
+      "plannedHours": "Planned Hours",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "assignmentManagement": "Assignment Management",
+      "developerAssign": "Assign Developer"
+    },
+    "empty": {
+      "noProjects": "No projects available",
+      "createProject": "Please create a new project",
+      "createNewProject": "Create New Project"
+    }
+  },
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password",
+    "loginButton": "Login",
+    "oktaLogin": "Sign in with Okta",
+    "legacyLogin": "Legacy Login",
+    "or": "or",
+    "loginFailed": "Login failed",
+    "version": "Version {version}",
+    "validation": {
+      "usernameRequired": "Username is required",
+      "usernameMinLength": "Username must be at least 3 characters long",
+      "passwordRequired": "Password is required",
+      "passwordMinLength": "Password must be at least 6 characters long"
+    },
+    "okta": {
+      "error": {
+        "notInitialized": "Okta authentication is not properly configured",
+        "network": "Network error. Please check your connection",
+        "configuration": "Okta configuration error. Please contact administrator",
+        "default": "Login failed. Please try again"
+      }
+    }
+  },
+  "callback": {
+    "title": "Authentication Processing",
+    "processing": "Processing login...",
+    "pleaseWait": "Please wait while we complete your authentication",
+    "success": "Login successful!",
+    "redirecting": "Redirecting to your dashboard...",
+    "error": {
+      "title": "Authentication Error",
+      "default": "Authentication failed. Please try again",
+      "notInitialized": "Authentication system not properly configured",
+      "tokenRetrieval": "Failed to retrieve authentication tokens",
+      "accessDenied": "Access denied. Please contact administrator",
+      "invalidRequest": "Invalid authentication request",
+      "backToLogin": "Back to Login",
+      "retry": "Retry"
+    }
+  },
+  "workHours": {
+    "alreadyApproved": "Already Approved",
+    "rejected": "Rejected",
+    "reason": "Reason",
+    "totalHours": "{hours} hours",
+    "notEntered": "Not Entered",
+    "noWorkRecord": "No Work Record",
+    "pending": "Pending",
+    "approved": "Approved",
+    "warnings": {
+      "exceedTenHours": "Work hours exceed 10 hours for the day.",
+      "lessThanSevenHalf": "Work hours less than 7.5 hours for the day."
+    }
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Please enter a valid email address"
+  },
+  "errors": {
+    "timeout": "Save process has timed out. Please try again.",
+    "unauthorized": "You do not have permission to perform this operation.",
+    "networkError": "A network error occurred. Please check your connection.",
+    "timeoutError": "The operation timed out. Please try again.",
+    "saveFailed": "Save failed.",
+    "serverError": "A server error occurred. Please try again later.",
+    "resourceNotFound": "Resource not found.",
+    "accessDenied": "Access denied.",
+    "invalidRequest": "Invalid request.",
+    "generalError": "An error occurred.",
+    "unexpectedError": "An unexpected error occurred. Please try again.",
+    "workRecordsFetchFailed": "Failed to fetch work records",
+    "saveError": "An error occurred during save.",
+    "approvedDataUpdateRestricted": "Approved work records cannot be updated.",
+    "updateRestriction": "Update Restriction",
+    "networkErrorTitle": "Network Error",
+    "validationErrorTitle": "Validation Error",
+    "approvalStatusUpdated": "Approval status has been updated.",
+    "workRecordSaved": "Work records have been saved.",
+    "authenticationFailed": "Username or password is incorrect",
+    "authenticationError": "Authentication failed",
+    "forbidden": "You do not have permission to perform this operation",
+    "validationError": "There are errors in the input",
+    "invalidArgument": "Invalid parameter",
+    "invalidState": "Cannot execute in the current state",
+    "duplicateAssignment": "Already assigned",
+    "internalError": "Server error occurred",
+    "notFound": "Resource not found",
+    "conflict": "Data conflict occurred"
+  },
+  "notifications": {
+    "error": "Error",
+    "success": "Success",
+    "info": "Information",
+    "warning": "Warning"
+  },
+  "projectForm": {
+    "createTitle": "Create New Project",
+    "editTitle": "Edit Project",
+    "name": "Project Name",
+    "description": "Description",
+    "startDate": "Start Date",
+    "plannedEndDate": "Planned End Date",
+    "status": "Status",
+    "validation": {
+      "nameRequired": "Project name is required",
+      "nameMaxLength": "Project name must be 100 characters or less",
+      "startDateRequired": "Start date is required",
+      "startDateFuture": "Start date must be today or later",
+      "endDateRequired": "Planned end date is required",
+      "endDateAfterStart": "Planned end date must be after start date",
+      "statusRequired": "Status is required"
+    }
+  },
+  "projectDelete": {
+    "title": "Confirm Project Deletion",
+    "confirmMessage": "Are you sure you want to delete this project?",
+    "plannedHours": "Planned Hours: {hours} hours",
+    "consumedHours": "Consumed Hours: {hours} hours",
+    "warningTitle": "Warning",
+    "hoursWarning": "This project already has recorded work hours. Deleting it may also delete related work records.",
+    "alertTitle": "Alert",
+    "assignmentAlert": "This project has developers assigned to it. Deleting it will also delete all assignment information.",
+    "irreversible": "This operation cannot be undone."
+  },
+  "developerAssign": {
+    "title": "Developer Assignment Management",
+    "currentAssignments": "Current Assignment Status",
+    "noAssignments": "No developers are assigned yet",
+    "addNewAssignment": "Add New Assignment",
+    "selectDeveloper": "Select Developer",
+    "duplicateError": "Duplicate Assignment Error",
+    "duplicateMessage": "This developer is already assigned to this project",
+    "addAssignment": "Add Assignment",
+    "developer": "Developer",
+    "assignedDate": "Assigned Date",
+    "validation": {
+      "selectDeveloper": "Please select a developer"
+    }
+  },
+  "calendar": {
+    "missingDates": "{count} missing entries",
+    "date": "Date {date}",
+    "today": "today",
+    "weekend": "weekend",
+    "holiday": "holiday",
+    "missingWorkHours": "missing work hours",
+    "months": {
+      "january": "January",
+      "february": "February", 
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
+    },
+    "weekdays": {
+      "sun": "Sun",
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat"
+    },
+    "legend": {
+      "missingDate": "Missing Entry",
+      "weekend": "Weekend",
+      "today": "Today"
+    }
+  },
+  "jira": {
+    "status": {
+      "connected": "Connected",
+      "disconnected": "Disconnected",
+      "testing": "Testing",
+      "error": "Error",
+      "success": "Connection Successful",
+      "dissuccess": "Connection Failed"
+    },
+    "sync": {
+      "title": "JIRA Sync",
+      "description": "JIRA project synchronization management",
+      "trigger": {
+        "success": "Manual sync triggered successfully"
+      },
+      "messages": {
+        "cancelSuccess": "Sync cancelled successfully",
+        "retrySuccess": "Retry initiated successfully",
+        "refreshing": "Refreshing data...",
+        "syncCompleted": "Sync completed successfully",
+        "syncFailed": "Sync failed"
+      },
+      "history": {
+        "title": "Sync History"
+      }
+    },
+    "queries": {
+      "title": "JQL Query Management",
+      "queryName": "Query Name",
+      "jqlExpression": "JQL Expression",
+      "priority": "Priority",
+      "create": "Create New Query",
+      "search": "Search queries",
+      "noQueries": "No JQL queries registered",
+      "noSearchResults": "No queries match the search criteria"
+    },
+    "templates": {
+      "title": "Template"
+    }
+  }
+}

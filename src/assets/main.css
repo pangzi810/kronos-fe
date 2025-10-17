@@ -1,0 +1,146 @@
+@import './base.css';
+
+/* Remove conflicting styles that interfere with Vuetify layout */
+#app {
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+/* Custom styles for the application */
+.v-main {
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.v-navigation-drawer {
+  z-index: 1005;
+}
+
+/* レスポンシブ対応のスタイル */
+@media (max-width: 959px) {
+  /* モバイル・タブレット向け */
+  .v-main {
+    padding: 8px;
+  }
+  
+  .v-container {
+    padding: 8px !important;
+  }
+  
+  .v-card {
+    margin-bottom: 16px;
+  }
+  
+  .v-app-bar-title {
+    font-size: 1rem !important;
+  }
+  
+  /* テーブルの横スクロール対応 */
+  .v-data-table {
+    overflow-x: auto;
+  }
+  
+  /* フォームの調整 */
+  .v-dialog {
+    margin: 16px;
+  }
+  
+  .v-dialog > .v-card {
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
+
+@media (max-width: 599px) {
+  /* スマートフォン向け */
+  .v-main {
+    padding: 4px;
+  }
+  
+  .v-container {
+    padding: 4px !important;
+  }
+  
+  .v-card-title {
+    font-size: 1.1rem !important;
+    line-height: 1.2 !important;
+    padding: 12px !important;
+  }
+  
+  .v-card-text {
+    padding: 12px !important;
+  }
+  
+  .v-btn {
+    min-width: auto;
+  }
+  
+  /* 小さい画面でのテキスト調整 */
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  h2 {
+    font-size: 1.3rem !important;
+  }
+  
+  /* ナビゲーションリストの調整 */
+  .v-list-item {
+    min-height: 48px;
+  }
+  
+  .v-list-item-title {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* デスクトップ向け */
+@media (min-width: 1264px) {
+  .v-main {
+    padding: 24px;
+  }
+  
+  .v-container {
+    max-width: 1200px;
+  }
+}
+
+/* ユーティリティクラス */
+.text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mobile-hidden {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .mobile-hidden {
+    display: block;
+  }
+}
+
+.desktop-hidden {
+  display: block;
+}
+
+@media (min-width: 960px) {
+  .desktop-hidden {
+    display: none;
+  }
+}

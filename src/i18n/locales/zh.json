@@ -1,0 +1,640 @@
+{
+  "app": {
+    "title": "工时管理系统"
+  },
+  "auth": {
+    "logout": "登出"
+  },
+  "navigation": {
+    "dashboard": "仪表板",
+    "workRecords": "工时输入",
+    "approval": "审批处理",
+    "approverManagement": "审批者管理",
+    "dailyApproval": "每日审批",
+    "developerApprovalStatus": "审批状态查询",
+    "projects": "项目管理",
+    "projectList": "项目列表",
+    "assignments": "任务分配",
+    "admin": "管理",
+    "adminSupervisors": "上级设置管理",
+    "workRecordsAnalysis": "工时分析报告",
+    "home": "首页"
+  },
+  "common": {
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "search": "搜索",
+    "loading": "加载中...",
+    "refresh": "刷新",
+    "filter": "筛选",
+    "close": "关闭",
+    "open": "打开",
+    "success": "成功",
+    "error": "错误",
+    "info": "信息",
+    "warning": "警告",
+    "login": "登录",
+    "logout": "登出",
+    "username": "用户名",
+    "password": "密码",
+    "email": "邮箱",
+    "name": "姓名",
+    "description": "描述",
+    "status": "状态",
+    "actions": "操作",
+    "create": "创建",
+    "created": "已创建",
+    "update": "更新",
+    "view": "查看",
+    "export": "导出",
+    "import": "导入",
+    "back": "返回",
+    "date": "日期",
+    "noData": "暂无数据",
+    "confirm": "确认",
+    "total": "合计",
+    "searching": "搜索中...",
+    "project": "项目"
+  },
+  "dashboard": {
+    "title": "工时记录",
+    "description": "记录和管理每日工作时间",
+    "welcome": "{name}，欢迎回来",
+    "todayHours": "今日工时",
+    "weekHours": "本周工时",
+    "monthAverage": "月平均",
+    "activeProjects": "活跃项目",
+    "quickActions": "快速操作"
+  },
+  "workRecords": {
+    "title": "工时记录",
+    "description": "记录和管理每日工作时间",
+    "todayHours": "今日工时",
+    "weekHours": "本周工时",
+    "monthAverage": "月平均",
+    "activeProjects": "活跃项目",
+    "today": "今天",
+    "thisWeek": "本周",
+    "avgInMonth": "月平均",
+    "categories": {
+      "development": "开发",
+      "meeting": "会议",
+      "testing": "测试",
+      "documentation": "文档编写",
+      "research": "研究",
+      "review": "审查"
+    },
+    "alreadyApproved": "已审批",
+    "addProject": "请添加项目",
+    "noProjectSelected": "未选择项目",
+    "selectProjectToAdd": "选择要添加的项目",
+    "projectNotFound": "未找到项目",
+    "warnings": {
+      "exceedTenHours": "每日工作时间超过10小时。",
+      "lessThanSevenHalf": "每日工作时间少于7.5小时。"
+    }
+  },
+  "workHours": {
+    "alreadyApproved": "已审批",
+    "rejected": "已驳回",
+    "reason": "原因",
+    "warnings": {
+      "exceedTenHours": "每日工作时间超过10小时。",
+      "lessThanSevenHalf": "每日工作时间少于7.5小时。"
+    }
+  },
+  "approval": {
+    "title": "审批管理",
+    "description": "审批和管理下属的工时记录",
+    "pending": "待审批",
+    "approved": "已审批",
+    "rejected": "已驳回",
+    "overdue": "已过期",
+    "pendingApproval": "待审批列表",
+    "approvedThisMonth": "本月已审批",
+    "unappliedThisMonth": "本月未申请",
+    "members": "成员",
+    "noRecords": "没有待审批的工时记录",
+    "noPendingApproval": "没有待审批项",
+    "pendingApprovalList": "待审批",
+    "approvalHistory": "审批历史",
+    "userWorkRecords": "{userName}的工时记录",
+    "categoryHours": "分类工时",
+    "totalHours": "总工时",
+    "applicant": "申请人",
+    "workDate": "工作日期",
+    "workTime": "工作时间",
+    "duration": "时长",
+    "appliedAt": "申请时间",
+    "project": "项目",
+    "projects": "项目",
+    "situation": "状态",
+    "action": "操作",
+    "details": "详情",
+    "user": "用户",
+    "approvalStatus": "审批状态",
+    "approvalDetails": "审批详情",
+    "rejectionConfirm": "驳回确认",
+    "rejectionReason": "驳回原因",
+    "rejectionReasonPlaceholder": "请输入驳回原因",
+    "rejectionReasonRequired": "驳回原因为必填项",
+    "projectBreakdown": "项目明细",
+    "description": "描述",
+    "actionsHeader": "操作",
+    "status": {
+      "notEntered": "未输入",
+      "pending": "待审批",
+      "approved": "已审批",
+      "rejected": "已驳回",
+      "cancelled": "已取消",
+      "unknown": "未知",
+      "active": "活跃",
+      "inactive": "非活跃"
+    },
+    "actions": {
+      "approve": "审批",
+      "reject": "驳回",
+      "batchApprove": "批量审批",
+      "batchReject": "批量驳回",
+      "bulkApprove": "批量审批",
+      "bulkReject": "批量驳回"
+    },
+    "loading": {
+      "subordinates": "正在加载下属信息...",
+      "history": "正在加载历史记录..."
+    },
+    "empty": {
+      "noSubordinates": "没有需要管理的下属",
+      "noSearchResults": "没有搜索结果",
+      "changeSearchCondition": "请更改搜索条件",
+      "subordinatesWillAppear": "分配下属后将在此显示",
+      "noHistoryInPeriod": "指定期间内没有审批历史",
+      "changePeriod": "请更改期间并重新搜索"
+    },
+    "search": {
+      "nameOrDepartment": "按姓名或部门搜索...",
+      "searchHistory": "搜索历史..."
+    },
+    "dateRange": {
+      "startDate": "开始日期",
+      "endDate": "结束日期",
+      "search": "搜索",
+      "today": "今天",
+      "yesterday": "昨天",
+      "thisWeek": "本周",
+      "lastWeek": "上周",
+      "thisMonth": "本月",
+      "lastMonth": "上月",
+      "last30Days": "过去30天"
+    },
+    "export": {
+      "csv": "CSV导出"
+    },
+    "category": {
+      "summary": "分类汇总",
+      "noData": "暂无数据",
+      "total": "总计"
+    },
+    "messages": {
+      "approveSuccess": "审批成功",
+      "approveFailed": "审批失败",
+      "rejectSuccess": "已驳回",
+      "rejectFailed": "驳回失败",
+      "batchApproveSuccess": "已批量审批{count}项",
+      "batchApproveFailed": "批量审批失败",
+      "batchRejectSuccess": "已驳回{count}条工时记录",
+      "batchRejectFailed": "批量驳回失败",
+      "fetchFailed": "获取待审批列表失败",
+      "fetchSubordinatesFailed": "获取下属信息失败",
+      "fetchHistoryFailed": "获取历史记录失败",
+      "selectPeriod": "请选择期间",
+      "rejectItems": "将驳回{count}条申请。",
+      "rejectWorkRecords": "将驳回{count}条工时记录。",
+      "csvDownloaded": "CSV文件已下载"
+    },
+    "counts": {
+      "items": "{count}项",
+      "people": "{count}人",
+      "projects": "{count}个项目",
+      "hours": "{hours}小时"
+    },
+    "table": {
+      "date": "日期时间",
+      "comment": "评论",
+      "commentReason": "评论/原因",
+      "reasonForRejection": "驳回原因"
+    },
+    "relativeTime": {
+      "daysAgo": "{days}天前",
+      "hoursAgo": "{hours}小时前",
+      "minutesAgo": "{minutes}分钟前"
+    },
+    "approver": {
+      "title": "审批者列表",
+      "noApproversSet": "未设置审批者",
+      "contactAdmin": "请联系管理员。",
+      "searchApprovers": "搜索审批者",
+      "currentEffectiveCount": "当前有效审批者：{count}人",
+      "approver": "审批者",
+      "effectivePeriod": "有效期",
+      "status": "状态",
+      "continuing": "～ 持续中",
+      "effective": "有效",
+      "inactive": "无效",
+      "notFound": "未找到审批者",
+      "loading": "正在加载审批者信息..."
+    },
+    "views": {
+      "table": "表格",
+      "timeline": "时间线"
+    }
+  },
+  "projects": {
+    "title": "项目管理",
+    "description": "项目列表和管理功能",
+    "projectList": "项目列表",
+    "newProject": "新建项目",
+    "totalProjects": "项目总数",
+    "activeProjects": "进行中项目",
+    "completedProjects": "已完成项目",
+    "status": {
+      "planning": "规划中",
+      "inProgress": "进行中",
+      "completed": "已完成",
+      "cancelled": "已取消"
+    }
+  },
+  "admin": {
+    "title": "管理员仪表板",
+    "description": "系统级KPI和管理功能",
+    "totalProjects": "项目总数",
+    "activeProjects": "进行中项目",
+    "totalDevelopers": "开发人员总数",
+    "totalHours": "总消耗工时",
+    "quickActions": "快速操作",
+    "allProjects": "所有项目",
+    "reports": "报告",
+    "supervisors": {
+      "title": "上级设置管理",
+      "description": "设置和管理员工与上级的关系",
+      "newAssignment": "新分配",
+      "totalEmployees": "员工总数",
+      "totalSupervisors": "上级总数",
+      "supervisor": "上级",
+      "kpi": {
+        "totalSupervisors": "上级总数"
+      },
+      "settings": {
+        "title": "上级设置",
+        "search": "搜索..."
+      },
+      "hierarchy": {
+        "title": "组织架构",
+        "noData": "暂无组织架构数据。"
+      },
+      "dialog": {
+        "newAssignmentTitle": "新建上级分配",
+        "bulkAssignmentTitle": "批量分配",
+        "employee": "员工",
+        "supervisor": "上级",
+        "effectiveStartDate": "生效开始日期",
+        "supervisorId": "上级ID",
+        "supervisorName": "上级姓名",
+        "effectiveDate": "生效日期",
+        "notes": "备注",
+        "csvFile": "CSV文件",
+        "preview": "预览（前5项）",
+        "template": "模板",
+        "bulkRegister": "批量注册"
+      },
+      "table": {
+        "employeeId": "员工ID",
+        "employeeName": "员工姓名",
+        "supervisorId": "上级ID",
+        "supervisorName": "上级姓名",
+        "effectiveDate": "生效日期"
+      },
+      "validation": {
+        "employeeRequired": "请选择员工",
+        "supervisorRequired": "请选择上级",
+        "effectiveDateRequired": "请输入生效开始日期"
+      },
+      "messages": {
+        "settingsUpdated": "设置已更新",
+        "assignmentSaved": "上级分配已保存",
+        "dataExporting": "正在导出数据...",
+        "templateDownloaded": "模板下载成功",
+        "bulkProcessing": "正在处理{count}条分配...",
+        "csvUploadDescription": "上传CSV文件以批量进行多个上级分配。"
+      },
+      "info": {
+        "csvUploadDescription": "上传CSV文件以批量进行多个上级分配。"
+      }
+    }
+  },
+  "adminSupervisors": {
+    "title": "上级设置管理",
+    "description": "设置和管理员工与上级的关系",
+    "newAssignment": "新建分配",
+    "statistics": {
+      "totalEmployees": "员工总数",
+      "totalSupervisors": "上级总数",
+      "unassignedEmployees": "未分配"
+    }
+  },
+  "statistics": {
+    "pendingCount": "待审批",
+    "approvedCount": "已审批",
+    "rejectedCount": "已驳回",
+    "totalDays": "记录天数"
+  },
+  "dateTime": {
+    "today": "今天",
+    "yesterday": "昨天",
+    "thisWeek": "本周",
+    "thisMonth": "本月",
+    "lastMonth": "上月"
+  },
+  "dates": {
+    "today": "今天",
+    "yesterday": "昨天",
+    "thisWeek": "本周",
+    "thisMonth": "本月",
+    "lastMonth": "上月"
+  },
+  "validation": {
+    "required": "此项为必填项",
+    "email": "请输入有效的邮箱地址",
+    "minLength": "请至少输入{min}个字符",
+    "maxLength": "最多允许{max}个字符"
+  },
+  "developerApprovalStatus": {
+    "title": "审批状态查询",
+    "description": "查看您的工时记录审批状态",
+    "calendar": {
+      "title": "审批状态日历",
+      "monthYear": "{year}年{month}月",
+      "legend": {
+        "pending": "待审批",
+        "approved": "已审批",
+        "rejected": "已驳回"
+      },
+      "status": {
+        "pending": "待审批",
+        "approved": "已审批",
+        "rejected": "已驳回"
+      },
+      "dayNames": {
+        "0": "日",
+        "1": "一",
+        "2": "二",
+        "3": "三",
+        "4": "四",
+        "5": "五",
+        "6": "六"
+      },
+      "weekdays": {
+        "0": "周日",
+        "1": "周一",
+        "2": "周二",
+        "3": "周三",
+        "4": "周四",
+        "5": "周五",
+        "6": "周六"
+      }
+    },
+    "selectedDate": {
+      "totalHours": "总工时",
+      "categoryHours": "分类工时",
+      "rejectionReason": "驳回原因",
+      "projects": "项目",
+      "noWorkRecords": "当日无工时记录",
+      "hours": "{hours}小时"
+    },
+    "details": {
+      "totalHours": "总工时",
+      "categoryHours": "分类工时",
+      "projects": "项目",
+      "noWorkRecords": "当日无工时记录",
+      "hours": "{hours}小时"
+    },
+    "messages": {
+      "dataUpdated": "数据更新成功",
+      "fetchFailed": "获取数据失败",
+      "exportSuccess": "数据导出成功",
+      "exportFailed": "导出失败",
+      "detailsInsufficient": "详情不足"
+    },
+    "sampleData": {
+      "projectA": "项目A",
+      "projectB": "项目B"
+    },
+    "mockData": {
+      "development": "开发",
+      "testing": "测试",
+      "meeting": "会议",
+      "projectA": "项目A",
+      "projectB": "项目B"
+    }
+  },
+  "projectList": {
+    "title": "项目列表",
+    "newProject": "新建项目",
+    "breadcrumbs": {
+      "home": "首页",
+      "projects": "项目"
+    },
+    "filters": {
+      "search": "搜索",
+      "status": "状态",
+      "all": "全部"
+    },
+    "table": {
+      "projectName": "项目名称",
+      "status": "状态",
+      "period": "期间",
+      "actions": "操作"
+    },
+    "details": {
+      "title": "项目详情",
+      "description": "描述",
+      "noDescription": "暂无描述",
+      "plannedHours": "计划工时",
+      "createdAt": "创建日期",
+      "updatedAt": "更新日期",
+      "assignmentManagement": "分配管理",
+      "developerAssign": "开发人员分配"
+    },
+    "empty": {
+      "noProjects": "暂无项目",
+      "createProject": "请创建新项目",
+      "createNewProject": "创建新项目"
+    }
+  },
+  "login": {
+    "title": "登录",
+    "username": "用户名",
+    "password": "密码",
+    "loginButton": "登录",
+    "loginFailed": "登录失败",
+    "version": "版本 {version}",
+    "validation": {
+      "usernameRequired": "用户名为必填项",
+      "usernameMinLength": "用户名至少需要3个字符",
+      "passwordRequired": "密码为必填项",
+      "passwordMinLength": "密码至少需要6个字符"
+    }
+  },
+  "errors": {
+    "timeout": "保存处理超时。请重试。",
+    "unauthorized": "您没有执行此操作的权限。",
+    "networkError": "发生网络错误。请检查您的连接。",
+    "timeoutError": "操作超时。请重试。",
+    "saveFailed": "保存失败。",
+    "serverError": "发生服务器错误。请稍后再试。",
+    "resourceNotFound": "未找到资源。",
+    "accessDenied": "访问被拒绝。",
+    "invalidRequest": "无效请求。",
+    "generalError": "发生错误。",
+    "unexpectedError": "发生意外错误。请重试。",
+    "workRecordsFetchFailed": "获取工时记录失败",
+    "saveError": "保存时发生错误。",
+    "approvedDataUpdateRestricted": "已审批的工时记录无法更新。",
+    "updateRestriction": "更新限制",
+    "networkErrorTitle": "网络错误",
+    "validationErrorTitle": "验证错误",
+    "approvalStatusUpdated": "审批状态已更新。",
+    "workRecordSaved": "工时记录已保存。",
+    "authenticationFailed": "用户名或密码不正确",
+    "authenticationError": "认证失败",
+    "forbidden": "您没有执行此操作的权限",
+    "validationError": "输入内容有误",
+    "invalidArgument": "无效参数",
+    "invalidState": "当前状态下无法执行",
+    "duplicateAssignment": "已分配",
+    "internalError": "发生服务器错误",
+    "notFound": "未找到资源",
+    "conflict": "发生数据冲突"
+  },
+  "notifications": {
+    "error": "错误",
+    "success": "成功",
+    "info": "信息",
+    "warning": "警告"
+  },
+  "projectForm": {
+    "createTitle": "创建新项目",
+    "editTitle": "编辑项目",
+    "name": "项目名称",
+    "description": "描述",
+    "startDate": "开始日期",
+    "plannedEndDate": "计划结束日期",
+    "status": "状态",
+    "validation": {
+      "nameRequired": "项目名称为必填项",
+      "nameMaxLength": "项目名称不能超过100个字符",
+      "startDateRequired": "开始日期为必填项",
+      "startDateFuture": "开始日期必须是今天或之后的日期",
+      "endDateRequired": "计划结束日期为必填项",
+      "endDateAfterStart": "计划结束日期必须晚于开始日期",
+      "statusRequired": "状态为必填项"
+    }
+  },
+  "projectDelete": {
+    "title": "确认删除项目",
+    "confirmMessage": "您确定要删除此项目吗？",
+    "plannedHours": "计划工时：{hours}小时",
+    "consumedHours": "已消耗工时：{hours}小时",
+    "warningTitle": "警告",
+    "hoursWarning": "此项目已有工时记录。删除可能会同时删除相关的工时记录。",
+    "alertTitle": "警告",
+    "assignmentAlert": "此项目已分配开发人员。删除将同时删除所有分配信息。",
+    "irreversible": "此操作无法撤销。"
+  },
+  "developerAssign": {
+    "title": "开发人员分配管理",
+    "currentAssignments": "当前分配状态",
+    "noAssignments": "尚未分配开发人员",
+    "addNewAssignment": "添加新分配",
+    "selectDeveloper": "选择开发人员",
+    "duplicateError": "重复分配错误",
+    "duplicateMessage": "此开发人员已分配到此项目",
+    "addAssignment": "添加分配",
+    "developer": "开发人员",
+    "assignedDate": "分配日期",
+    "validation": {
+      "selectDeveloper": "请选择开发人员"
+    }
+  },
+  "projectListView": {
+    "title": "项目列表",
+    "newProject": "新建项目",
+    "filters": {
+      "projects": "项目"
+    },
+    "search": {
+      "search": "搜索",
+      "projectName": "项目名称",
+      "status": "状态",
+      "period": "期间"
+    },
+    "dialog": {
+      "title": "项目详情",
+      "name": "项目名称",
+      "description": "描述",
+      "status": "状态",
+      "startDate": "开始日期",
+      "endDate": "结束日期",
+      "plannedHours": "计划工时",
+      "createdAt": "创建日期",
+      "updatedAt": "更新日期"
+    },
+    "empty": {
+      "noProjects": "暂无项目",
+      "createProject": "请创建新项目",
+      "createNewProject": "创建新项目"
+    }
+  },
+  "jira": {
+    "status": {
+      "connected": "已连接",
+      "disconnected": "未连接",
+      "testing": "测试中",
+      "error": "错误",
+      "success": "连接成功",
+      "dissuccess": "连接失败"
+    },
+    "sync": {
+      "title": "JIRA 同步",
+      "description": "JIRA 项目同步管理",
+      "trigger": {
+        "success": "手动同步触发成功"
+      },
+      "messages": {
+        "cancelSuccess": "同步取消成功",
+        "retrySuccess": "重试启动成功",
+        "refreshing": "正在刷新数据...",
+        "syncCompleted": "同步完成",
+        "syncFailed": "同步失败"
+      },
+      "history": {
+        "title": "同步历史"
+      }
+    },
+    "queries": {
+      "title": "JQL查询管理",
+      "queryName": "查询名称",
+      "jqlExpression": "JQL表达式",
+      "priority": "优先级",
+      "create": "创建新查询",
+      "search": "搜索查询",
+      "noQueries": "没有注册JQL查询",
+      "noSearchResults": "没有匹配搜索条件的查询"
+    },
+    "templates": {
+      "title": "模板"
+    }
+  }
+}
