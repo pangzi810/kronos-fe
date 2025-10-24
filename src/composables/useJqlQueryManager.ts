@@ -14,8 +14,7 @@ export interface UseJqlQueryManagerOptions {
   autoLoad?: boolean
 }
 
-export function useJqlQueryManager(options: UseJqlQueryManagerOptions = {}) {
-  const { autoLoad = true } = options
+export function useJqlQueryManager(_options: UseJqlQueryManagerOptions = {}) {
   
   const toast = useToast()
   const { t } = useI18n()
