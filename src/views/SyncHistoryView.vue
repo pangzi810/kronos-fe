@@ -46,7 +46,6 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useErrorNotification } from '@/composables/useErrorNotification'
-import SyncStatusMonitor from '@/components/jira/SyncStatusMonitor.vue'
 import ManualSyncTrigger from '@/components/jira/ManualSyncTrigger.vue'
 import SyncHistoryViewer from '@/components/jira/SyncHistoryViewer.vue'
 import jiraSyncService from '@/services/domains/jira-sync.service'

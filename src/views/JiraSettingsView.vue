@@ -76,7 +76,7 @@ function handleStatusUpdated(status: JiraConnectionStatus) {
   connectionStatus.value = status
 }
 
-function handleConfigurationSaved(config: JiraConnectionConfig) {
+function handleConfigurationSaved(_config: JiraConnectionConfig) {
   showInfoNotification($t('jira.messages.settingsSaved'))
 }
 
