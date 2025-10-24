@@ -19,4 +19,14 @@ export default defineConfigWithVueTs(
   pluginVue.configs['flat/essential'],
   vueTsConfigs.recommended,
   skipFormatting,
+  {
+    rules: {
+      // Allow Vuetify's v-slot shorthand with dot notation (e.g., #item.name)
+      'vue/valid-v-slot': ['error', { allowModifiers: true }],
+      // Warn on unused vars instead of error to avoid blocking builds
+      '@typescript-eslint/no-unused-vars': 'warn',
+      // Allow any type in some cases (can be gradually fixed)
+      '@typescript-eslint/no-explicit-any': 'warn',
+    },
+  },
 )

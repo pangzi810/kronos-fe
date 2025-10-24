@@ -145,9 +145,9 @@
     >
       <!-- Category Headers with Totals -->
       <template 
-        v-for="category in props.categories" 
+        v-for="category in props.categories"
         :key="category.code.value"
-        v-slot:[`header.${category.code.value}`]="{ column }"
+        v-slot:[`header.${category.code.value}`]
       >
         <div class="text-center">
           <div class="font-weight-medium">{{ category.name.value }}</div>
