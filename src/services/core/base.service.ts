@@ -92,7 +92,7 @@ export abstract class BaseApiService {
   /**
    * Perform POST request
    */
-  protected async post<T, D = any>(
+  protected async post<T, D = unknown>(
     path: string,
     data?: D,
     config?: AxiosRequestConfig
@@ -112,7 +112,7 @@ export abstract class BaseApiService {
   /**
    * Perform PUT request
    */
-  protected async put<T, D = any>(
+  protected async put<T, D = unknown>(
     path: string,
     data?: D,
     config?: AxiosRequestConfig
@@ -150,7 +150,7 @@ export abstract class BaseApiService {
   /**
    * Perform PATCH request
    */
-  protected async patch<T, D = any>(
+  protected async patch<T, D = unknown>(
     path: string,
     data?: D,
     config?: AxiosRequestConfig
@@ -170,7 +170,7 @@ export abstract class BaseApiService {
   /**
    * Build query string from parameters
    */
-  protected buildQueryString(params: Record<string, any>): string {
+  protected buildQueryString(params: Record<string, unknown>): string {
     const searchParams = new URLSearchParams()
     
     Object.entries(params).forEach(([key, value]) => {
@@ -202,7 +202,7 @@ export abstract class BaseApiService {
   /**
    * Build cache key
    */
-  protected buildCacheKey(prefix: string, params?: Record<string, any>): string {
+  protected buildCacheKey(prefix: string, params?: Record<string, unknown>): string {
     const builder = new CacheKeyBuilder(prefix)
     
     if (params) {
@@ -283,7 +283,7 @@ export abstract class PaginatedApiService<
    */
   async getPaginated(
     params?: PaginationParams,
-    additionalParams?: Record<string, any>,
+    additionalParams?: Record<string, unknown>,
     useCache = true
   ): Promise<PaginatedResponse<T>> {
     const allParams = { ...params, ...additionalParams }

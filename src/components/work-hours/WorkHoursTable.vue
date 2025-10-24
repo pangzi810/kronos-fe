@@ -382,7 +382,7 @@
 import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useDisplay } from 'vuetify'
-import { useWorkRecordTable } from '@/composables/useWorkRecordTable'
+import { useWorkRecordTable, type DynamicProjectRow } from '@/composables/useWorkRecordTable'
 import type { Project, WorkCategory, WorkRecord, WorkRecordApproval } from '@/services/types'
 import { projectService } from '@/services'
 
@@ -394,7 +394,7 @@ interface Props {
   loading?: boolean
   workRecordApproval?: WorkRecordApproval | null
   onSaveSuccess?: () => void
-  onSaveError?: (error: any) => void
+  onSaveError?: (error: unknown) => void
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -407,7 +407,7 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const emit = defineEmits<{
-  save: [payload: any]
+  save: [payload: unknown]
   'records-change': [project_id: string, category_code: string]
   'refresh': []
 }>()
@@ -420,7 +420,7 @@ const isMobile = computed(() => xs.value || sm.value)
 
 // Mobile dialog state
 const showMobileDialog = ref(false)
-const selectedRow = ref<any>(null)
+const selectedRow = ref<DynamicProjectRow | null>(null)
 
 // Initialize the composable
 const {
@@ -527,7 +527,7 @@ const handleSave = async () => {
     emit('save', payload)
 
     // Note: Success/error handling will be called by parent via exposed methods
-  } catch (error: any) {
+  } catch (error: unknown) {
     handleSaveError(error)
   }
 }
@@ -546,20 +546,20 @@ const handleSaveSuccess = () => {
 }
 
 // Handle save error (called from parent component via ref)
-const handleSaveError = (error: any) => {
+const handleSaveError = (error: unknown) => {
   showSuccessMessage.value = false
-  
+
   // Set error message
-  if (error?.message) {
-    errorMessage.value = error.message
+  if (error && typeof error === 'object' && 'message' in error) {
+    errorMessage.value = String(error.message)
   } else if (typeof error === 'string') {
     errorMessage.value = error
   } else {
     errorMessage.value = $t('errors.generalError')
   }
-  
+
   showErrorMessage.value = true
-  
+
   // Call parent's error handler if provided
   if (props.onSaveError) {
     props.onSaveError(error)
@@ -646,7 +646,7 @@ const handleEnterKey = async (event: KeyboardEvent) => {
 }
 
 // Mobile dialog handlers
-const openMobileDialog = (item: any) => {
+const openMobileDialog = (item: DynamicProjectRow) => {
   selectedRow.value = item
   showMobileDialog.value = true
 }

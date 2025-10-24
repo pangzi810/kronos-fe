@@ -1,6 +1,18 @@
 import { type AxiosError } from 'axios'
 
 /**
+ * API error response data structure
+ */
+export interface ApiErrorData {
+  message?: string
+  code?: string
+  errors?: Record<string, string[]>
+  error?: string
+  error_description?: string
+  requiredScope?: string
+}
+
+/**
  * Custom API Error classes
  */
 export class ApiException extends Error {
@@ -8,7 +20,7 @@ export class ApiException extends Error {
     message: string,
     public code?: string,
     public status?: number,
-    public details?: any
+    public details?: unknown
   ) {
     super(message)
     this.name = 'ApiException'
@@ -93,7 +105,7 @@ export class NetworkException extends ApiException {
 /**
  * Transform Axios error to custom exception
  */
-export function handleApiError(error: AxiosError<any>): never {
+export function handleApiError(error: AxiosError<ApiErrorData>): never {
   // Network error (no response)
   if (!error.response) {
     throw new NetworkException()
@@ -167,42 +179,42 @@ export function handleApiError(error: AxiosError<any>): never {
 /**
  * Check if error is an API exception
  */
-export function isApiException(error: any): error is ApiException {
+export function isApiException(error: unknown): error is ApiException {
   return error instanceof ApiException
 }
 
 /**
  * Check if error is a validation exception
  */
-export function isValidationException(error: any): error is ValidationException {
+export function isValidationException(error: unknown): error is ValidationException {
   return error instanceof ValidationException
 }
 
 /**
  * Check if error is an Okta authentication exception
  */
-export function isOktaAuthException(error: any): error is OktaAuthException {
+export function isOktaAuthException(error: unknown): error is OktaAuthException {
   return error instanceof OktaAuthException
 }
 
 /**
  * Check if error is a token expired exception
  */
-export function isTokenExpiredException(error: any): error is TokenExpiredException {
+export function isTokenExpiredException(error: unknown): error is TokenExpiredException {
   return error instanceof TokenExpiredException
 }
 
 /**
  * Check if error is a token refresh exception
  */
-export function isTokenRefreshException(error: any): error is TokenRefreshException {
+export function isTokenRefreshException(error: unknown): error is TokenRefreshException {
   return error instanceof TokenRefreshException
 }
 
 /**
  * Check if error requires user re-authentication
  */
-export function requiresReAuthentication(error: any): boolean {
+export function requiresReAuthentication(error: unknown): boolean {
   return (
     isTokenExpiredException(error) ||
     isTokenRefreshException(error) ||
@@ -213,26 +225,26 @@ export function requiresReAuthentication(error: any): boolean {
 /**
  * Extract user-friendly error message for authentication errors
  */
-export function getAuthErrorMessage(error: any): string {
+export function getAuthErrorMessage(error: unknown): string {
   if (isTokenExpiredException(error)) {
     return 'セッションが期限切れです。再度ログインしてください。'
   }
-  
+
   if (isTokenRefreshException(error)) {
     return '認証情報の更新に失敗しました。再度ログインしてください。'
   }
-  
+
   if (isOktaAuthException(error)) {
     return error.errorDescription || error.message
   }
-  
+
   return getErrorMessage(error)
 }
 
 /**
  * Extract error message from any error type
  */
-export function getErrorMessage(error: any): string {
+export function getErrorMessage(error: unknown): string {
   if (isApiException(error)) {
     return error.message
   }
