@@ -1,5 +1,4 @@
 import { type AxiosError } from 'axios'
-import type { ApiError } from '../types/common.types'
 
 /**
  * Custom API Error classes

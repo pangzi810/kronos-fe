@@ -9,7 +9,7 @@ import type {
   WorkRecordUpsertRequest,
 } from '@/services/types/work-record-table.types'
 import type { Project } from '@/services/types/project.types'
-import type { WorkRecord, WorkCategory, WorkRecordApproval } from '@/services/types/work-record.types'
+import type { WorkRecord, WorkRecordApproval } from '@/services/types/work-record.types'
 
 /**
  * Options for useWorkRecordTable composable

@@ -1,5 +1,5 @@
 import { ref, computed, type Ref } from 'vue'
-import { projectService, userService } from '../services'
+import { projectService } from '../services'
 import { useErrorNotification } from './useErrorNotification'
 import type {
   Project,

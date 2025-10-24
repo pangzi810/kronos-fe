@@ -2,9 +2,6 @@ import apiClient from '../core/api.client'
 import { apiCache, CacheKeyBuilder } from '../core/api.cache'
 import { handleApiError } from '../core/error.handler'
 import type {
-  WorkRecordApproval,
-  ApprovalRequest,
-  ApprovalDecision,
   ApprovalHistory,
   ApprovalStatus
 } from '../types/work-record.types'
