@@ -9,7 +9,7 @@ import type {
   WorkRecordUpsertRequest,
 } from '@/services/types/work-record-table.types'
 import type { Project } from '@/services/types/project.types'
-import type { WorkRecord, WorkRecordApproval } from '@/services/types/work-record.types'
+import type { WorkRecord } from '@/services/types/work-record.types'
 
 /**
  * Options for useWorkRecordTable composable
@@ -248,7 +248,7 @@ export function useWorkRecordTable(options: UseWorkRecordTableOptions): UseWorkR
       }
     })
 
-    projectCounts.forEach((rowIds, projectId) => {
+    projectCounts.forEach((rowIds, _projectId) => {
       if (rowIds.length > 1) {
         rowIds.forEach(rowId => {
           allErrors.push({

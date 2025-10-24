@@ -415,7 +415,7 @@ const emit = defineEmits<{
 const { t: $t } = useI18n()
 
 // Responsive breakpoint detection
-const { xs, sm, md } = useDisplay()
+const { xs, sm } = useDisplay()
 const isMobile = computed(() => xs.value || sm.value)
 
 // Mobile dialog state
@@ -626,23 +626,24 @@ const handleEmptyRowSearch = async (query: string) => {
   }, 150)
 }
 
-const handleEmptyRowFocused = async (focused: boolean) => {
+const handleEmptyRowFocused = async (_focused: boolean) => {
   performSearch("")
 }
 
 const handleEmptyRowProjectSelect = async (project: Project | null) => {
   if (!project) return
-  
+
   // Add new project row with the selected project
   await addProjectRow(project)
-  
+
   // Clear the autocomplete value, text and search query
   selectedProjectValue.value = null
   emptyRowSearchQuery.value = ''
   emptyRowAutocompleteRef.value.blur()
 }
 
-const handleEnterKey = async (event: KeyboardEvent) => {
+const handleEnterKey = async (_event: KeyboardEvent) => {
+  // Empty handler - can be used for future functionality
 }
 
 // Mobile dialog handlers

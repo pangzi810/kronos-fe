@@ -78,7 +78,7 @@ export function useApiError() {
           try {
             const validationErrors = JSON.parse(apiError.details)
             console.log('Validation errors:', validationErrors)
-          } catch (e) {
+          } catch (_e) {
             // details is not JSON
           }
         }

@@ -70,7 +70,7 @@ class ApiClient {
           return Promise.reject(error)
         }
 
-        const { status, data } = error.response
+        const { status } = error.response
 
         // Handle 401 Unauthorized - attempt token refresh and retry
         if (status === 401 && !originalRequest._retry) {

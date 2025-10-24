@@ -137,7 +137,7 @@ export class CacheKeyBuilder {
 
   addParams(params: Record<string, any>): CacheKeyBuilder {
     Object.entries(params)
-      .filter(([_, value]) => value !== undefined && value !== null)
+      .filter(([_key, value]) => value !== undefined && value !== null)
       .sort(([a], [b]) => a.localeCompare(b))
       .forEach(([key, value]) => {
         this.parts.push(`${key}:${value}`)

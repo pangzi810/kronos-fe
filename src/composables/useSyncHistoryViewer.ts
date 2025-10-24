@@ -29,7 +29,7 @@ export function useSyncHistoryViewer(options: UseSyncHistoryViewerOptions = {}) 
   const { autoLoad = true, defaultPageSize = 10 } = options
   
   const { t: $t } = useI18n()
-  const { showErrorNotification, showSuccessNotification } = useErrorNotification()
+  const { showErrorNotification } = useErrorNotification()
   const { loadSyncHistoryDetails } = useJiraSync()
 
   // State

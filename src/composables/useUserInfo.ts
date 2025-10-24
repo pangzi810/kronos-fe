@@ -56,12 +56,12 @@ export function useUserInfo(): UseUserInfoReturn {
   
   // Dependencies
   const { isAuthenticated, user: oktaUser } = useOktaAuth()
-  const authStore = useAuthStore()
-  
+  // const authStore = useAuthStore() // Unused - kept for future use
+
   // Cache management
   const CACHE_DURATION = 5 * 60 * 1000 // 5 minutes in milliseconds
   let fetchPromise: Promise<UserInfo | null> | null = null
-  let retryCount = 0
+  // let retryCount = 0 // Unused - kept for future retry logic
   const maxRetries = 3
   const baseRetryDelay = 1000 // 1 second
   

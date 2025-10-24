@@ -159,7 +159,7 @@ export function useResponseTemplateEditor(options: UseResponseTemplateEditorOpti
       
       return true
       
-    } catch (error) {
+    } catch (_error) {
       toast.error('テンプレートの保存に失敗しました')
       console.error('Failed to save template:', error)
       return false
@@ -181,7 +181,7 @@ export function useResponseTemplateEditor(options: UseResponseTemplateEditorOpti
       if (testData.value.trim()) {
         try {
           testDataObj = JSON.parse(testData.value)
-        } catch (e) {
+        } catch (_e) {
           toast.error('テストデータのJSONが無効です')
           testing.value = false
           return
@@ -209,7 +209,7 @@ export function useResponseTemplateEditor(options: UseResponseTemplateEditorOpti
       // Basic template validation
       await validateTemplateContent()
       
-    } catch (error) {
+    } catch (_error) {
       testResult.value = {
         success: false,
         result: null,
@@ -259,7 +259,7 @@ export function useResponseTemplateEditor(options: UseResponseTemplateEditorOpti
         warnings
       }
       
-    } catch (error) {
+    } catch (_error) {
       validationResult.value = {
         valid: false,
         errors: ['テンプレートの検証中にエラーが発生しました'],
