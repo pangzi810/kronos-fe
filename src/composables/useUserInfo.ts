@@ -1,4 +1,4 @@
-import { ref, computed, watchEffect, onUnmounted, type Ref, type ComputedRef } from 'vue'
+import { ref, computed, watchEffect, onUnmounted, type Ref } from 'vue'
 import { useAuthStore } from '@/stores/auth'
 import apiClient from '@/services/core/api.client'
 import { useOktaAuth } from '@/composables/useOktaAuth'

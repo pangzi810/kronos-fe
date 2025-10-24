@@ -1,4 +1,4 @@
-import axios, { type AxiosError, type AxiosInstance, type InternalAxiosRequestConfig, type AxiosResponse } from 'axios'
+import axios, { type AxiosError, type AxiosInstance, type InternalAxiosRequestConfig } from 'axios'
 import { useToast } from 'vue-toastification'
 import router from '@/router'
 import { useAuthStore } from '@/stores/auth'

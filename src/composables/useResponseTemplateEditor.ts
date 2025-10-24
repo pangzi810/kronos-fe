@@ -1,4 +1,4 @@
-import { ref, computed, watch, nextTick } from 'vue'
+import { ref, computed, nextTick } from 'vue'
 import { useToast } from 'vue-toastification'
 import { jiraService } from '@/services/domains/jira.service'
 import type { 

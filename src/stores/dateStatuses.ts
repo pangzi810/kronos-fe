@@ -3,11 +3,6 @@ import { ref, computed } from 'vue'
 import type { DateStatus } from '@/services/types'
 import { workRecordService } from '@/services'
 
-interface MonthKey {
-  year: number
-  month: number
-}
-
 interface CachedMonth {
   key: string
   year: number
