@@ -71,5 +71,6 @@ export default defineConfig({
     deps: {
       inline: ['vuetify']
     }
-  }
+  },
+  envDir: './tools/environments',
 })
