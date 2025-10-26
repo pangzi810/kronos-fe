@@ -3,7 +3,6 @@
  */
 
 import type { PaginationParams } from './common.types'
-import type { User } from './user.types'
 
 // Project Status enum
 export type ProjectStatus = 'PLANNING' | 'IN_PROGRESS' | 'COMPLETED' | 'CANCELLED'

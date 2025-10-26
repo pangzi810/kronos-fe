@@ -9,7 +9,7 @@ import type {
   WorkRecordUpsertRequest,
 } from '@/services/types/work-record-table.types'
 import type { Project } from '@/services/types/project.types'
-import type { WorkRecord, WorkCategory, WorkRecordApproval } from '@/services/types/work-record.types'
+import type { WorkRecord } from '@/services/types/work-record.types'
 
 /**
  * Options for useWorkRecordTable composable
@@ -51,7 +51,7 @@ function debounce<T extends (...args: any[]) => any>(func: T, delay: number): T 
   let timeoutId: ReturnType<typeof setTimeout>
   return ((...args: any[]) => {
     clearTimeout(timeoutId)
-    timeoutId = setTimeout(() => func.apply(null, args), delay)
+    timeoutId = setTimeout(() => func(...args), delay)
   }) as T
 }
 
@@ -248,7 +248,7 @@ export function useWorkRecordTable(options: UseWorkRecordTableOptions): UseWorkR
       }
     })
 
-    projectCounts.forEach((rowIds, projectId) => {
+    projectCounts.forEach((rowIds, _projectId) => {
       if (rowIds.length > 1) {
         rowIds.forEach(rowId => {
           allErrors.push({

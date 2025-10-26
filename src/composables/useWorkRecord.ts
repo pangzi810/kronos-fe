@@ -88,7 +88,7 @@ export function useWorkRecord(options: UseWorkRecordOptions = {}) {
   const loadingWorkRecords = ref(false)
   const loadingDateStatuses = ref(false)
   const loadingSummary = ref(false)
-  const savingWorkRecords = ref(false)
+  // const savingWorkRecords = ref(false) // Unused - remove if not needed in future
   const error = ref<Error | null>(null)
 
   // Private state for caching
@@ -326,36 +326,36 @@ export function useWorkRecord(options: UseWorkRecordOptions = {}) {
     }, 0)
   }
 
-  function calculateProjectHours(recordsList: WorkRecord[]): Map<string, number> {
+  function _calculateProjectHours(recordsList: WorkRecord[]): Map<string, number> {
     const projectHours = new Map<string, number>()
-    
+
     recordsList.forEach(record => {
       const hours = Object.values(record.categoryHours || {})
         .reduce((sum, h) => sum + h, 0)
-      
+
       const current = projectHours.get(record.projectId) || 0
       projectHours.set(record.projectId, current + hours)
     })
-    
+
     return projectHours
   }
 
   // Calculate total by category
-  function calculateCategoryHours(recordsList: WorkRecord[]): Map<string, number> {
+  function _calculateCategoryHours(recordsList: WorkRecord[]): Map<string, number> {
     const categoryHours = new Map<string, number>()
-    
+
     recordsList.forEach(record => {
       Object.entries(record.categoryHours || {}).forEach(([categoryId, hours]) => {
         const current = categoryHours.get(categoryId) || 0
         categoryHours.set(categoryId, current + (hours || 0))
       })
     })
-    
+
     return categoryHours
   }
 
   // Calculate total hours for a specific project
-  function calculateProjectTotal(recordsList: WorkRecord[], projectId: string): number {
+  function _calculateProjectTotal(recordsList: WorkRecord[], projectId: string): number {
     return recordsList
       .filter(record => record.projectId === projectId)
       .reduce((sum, record) => {
@@ -366,7 +366,7 @@ export function useWorkRecord(options: UseWorkRecordOptions = {}) {
   }
 
   // Calculate total hours for a specific category
-  function calculateCategoryTotal(recordsList: WorkRecord[], categoryId: string): number {
+  function _calculateCategoryTotal(recordsList: WorkRecord[], categoryId: string): number {
     return recordsList.reduce((sum, record) => {
       return sum + (record.categoryHours?.[categoryId] || 0)
     }, 0)
@@ -433,7 +433,7 @@ export function useWorkRecord(options: UseWorkRecordOptions = {}) {
     return day === 0 || day === 6
   }
 
-  function isRecordApproved(record: WorkRecord): boolean {
+  function isRecordApproved(_record: WorkRecord): boolean {
     // TODO: Add approvalStatus when available
     return false
   }

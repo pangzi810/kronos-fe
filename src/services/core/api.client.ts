@@ -1,4 +1,4 @@
-import axios, { type AxiosError, type AxiosInstance, type InternalAxiosRequestConfig, type AxiosResponse } from 'axios'
+import axios, { type AxiosError, type AxiosInstance, type InternalAxiosRequestConfig } from 'axios'
 import { useToast } from 'vue-toastification'
 import router from '@/router'
 import { useAuthStore } from '@/stores/auth'
@@ -70,7 +70,7 @@ class ApiClient {
           return Promise.reject(error)
         }
 
-        const { status, data } = error.response
+        const { status } = error.response
 
         // Handle 401 Unauthorized - attempt token refresh and retry
         if (status === 401 && !originalRequest._retry) {

@@ -56,7 +56,7 @@ export function useErrorNotification() {
       showDetails?: boolean
     } = {}
   ) => {
-    const { title = $t('notifications.error'), duration = 5000, showDetails = false } = options
+    const { duration = 5000, showDetails = false } = options
 
     let message = ''
     let errorCode = ''
@@ -210,7 +210,7 @@ export function useErrorNotification() {
         if (Array.isArray(validationDetails) && validationDetails.length > 0) {
           message = validationDetails.join(', ')
         }
-      } catch (e) {
+      } catch (_e) {
         // details がJSONでない場合はそのまま使用
         message = error.details
       }

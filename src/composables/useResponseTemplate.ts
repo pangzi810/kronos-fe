@@ -422,7 +422,7 @@ export function useResponseTemplate(options: UseResponseTemplateOptions = {}) {
         throw new Error('Template not found')
       }
 
-      const newVersion = 2 // Default version since version property is not available
+      // const newVersion = 2 // Default version since version property is not available
       const versionRequest: ResponseTemplateCreateRequest = {
         templateName: `${originalTemplate.templateName} (Copy)`,
         velocityTemplate: originalTemplate.velocityTemplate,
@@ -571,9 +571,9 @@ export function useResponseTemplate(options: UseResponseTemplateOptions = {}) {
     if (!template.trim()) {
       errors.push('Template content cannot be empty')
     }
-    
+
     // Check for basic Velocity syntax
-    const velocityDirectives = /#(set|if|foreach|end|include|parse)/g
+    // const velocityDirectives = /#(set|if|foreach|end|include|parse)/g
     const openDirectives = (template.match(/#(if|foreach)/g) || []).length
     const closeDirectives = (template.match(/#end/g) || []).length
     

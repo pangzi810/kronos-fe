@@ -1,5 +1,5 @@
 import type { Project } from './project.types'
-import type { WorkRecord, WorkCategory, CategoryHours, WorkRecordApproval } from './work-record.types'
+import type { WorkCategory, CategoryHours, WorkRecordApproval } from './work-record.types'
 
 /**
  * Dynamic table row for project work records

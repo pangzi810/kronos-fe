@@ -1,4 +1,4 @@
-import { ref, computed, watchEffect, onUnmounted, type Ref, type ComputedRef } from 'vue'
+import { computed, type ComputedRef } from 'vue'
 import { useAuthStore } from '@/stores/auth'
 import type { UserClaims } from '@okta/okta-auth-js'
 

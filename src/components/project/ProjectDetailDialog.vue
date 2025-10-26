@@ -119,7 +119,7 @@ const statusConfig = {
 
 // Status utilities
 const getStatusColor = (status: string) => statusConfig[status as keyof typeof statusConfig]?.color || 'grey'
-const getStatusIcon = (status: string) => statusConfig[status as keyof typeof statusConfig]?.icon || 'mdi-help-circle'
+const _getStatusIcon = (status: string) => statusConfig[status as keyof typeof statusConfig]?.icon || 'mdi-help-circle'
 const getStatusText = (status: string) => statusConfig[status as keyof typeof statusConfig]?.text || status
 
 // Date utilities

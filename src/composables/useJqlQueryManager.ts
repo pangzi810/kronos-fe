@@ -1,4 +1,4 @@
-import { ref, computed, nextTick } from 'vue'
+import { ref, computed } from 'vue'
 import { useToast } from 'vue-toastification'
 import { useI18n } from 'vue-i18n'
 import { jiraService } from '@/services/domains/jira.service'
@@ -14,8 +14,7 @@ export interface UseJqlQueryManagerOptions {
   autoLoad?: boolean
 }
 
-export function useJqlQueryManager(options: UseJqlQueryManagerOptions = {}) {
-  const { autoLoad = true } = options
+export function useJqlQueryManager(_options: UseJqlQueryManagerOptions = {}) {
   
   const toast = useToast()
   const { t } = useI18n()
@@ -308,7 +307,7 @@ export function useJqlQueryManager(options: UseJqlQueryManagerOptions = {}) {
       
       const message = result.valid ? t('jira.queries.validationSuccessDetail') : result.errorMessage
       
-      // @ts-ignore - vue-toastification types issue
+      // @ts-expect-error - vue-toastification types issue
       toast[type](title + (message ? '\n' + message : ''))
     } catch (error) {
       toast.error(t('jira.queries.validationFailed'))

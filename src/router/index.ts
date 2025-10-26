@@ -4,8 +4,7 @@ import {
   requireAuth, 
   handleOktaCallback, 
   redirectIfAuthenticated,
-  requireScope,
-  requireAnyScope
+  requireScope
 } from './guards'
 import './types' // Import router type declarations
 
