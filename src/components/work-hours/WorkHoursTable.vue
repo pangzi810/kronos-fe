@@ -104,7 +104,6 @@
           :no-filter="true"
           :auto-select-first="false"
           return-object
-          @update:focused="handleEmptyRowFocused"
           class="mobile-project-autocomplete"
         >
           <template v-slot:item="{ props, item: searchItem }">
@@ -626,9 +625,6 @@ const handleEmptyRowSearch = async (query: string) => {
   }, 150)
 }
 
-const handleEmptyRowFocused = async (_focused: boolean) => {
-  performSearch("")
-}
 
 const handleEmptyRowProjectSelect = async (project: Project | null) => {
   if (!project) return
