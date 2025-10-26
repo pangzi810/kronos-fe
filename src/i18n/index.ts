@@ -4,21 +4,24 @@ import en from './locales/en.json'
 import zh from './locales/zh.json'
 
 export const SUPPORT_LOCALES = ['ja', 'en', 'zh'] as const
-export type SupportLocale = typeof SUPPORT_LOCALES[number]
+export type SupportLocale = (typeof SUPPORT_LOCALES)[number]
 
 // Detect browser language
 function getDefaultLocale(): SupportLocale {
   const locale = navigator.language.split('-')[0]
-  return SUPPORT_LOCALES.includes(locale as SupportLocale) 
-    ? (locale as SupportLocale) 
-    : 'ja'
+  return SUPPORT_LOCALES.includes(locale as SupportLocale) ? (locale as SupportLocale) : 'ja'
 }
 
 export const i18n = createI18n({
   legacy: false,
   locale: localStorage.getItem('locale') || getDefaultLocale(),
   fallbackLocale: 'ja',
-  messages: { ja, en, zh }
+  globalInjection: true,
+  messages: {
+    ja,
+    en,
+    zh
+  }
 })
 
 export default i18n
