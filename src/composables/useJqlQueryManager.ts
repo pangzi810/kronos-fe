@@ -306,8 +306,7 @@ export function useJqlQueryManager(_options: UseJqlQueryManagerOptions = {}) {
       const type = result.valid ? 'success' : 'error'
       
       const message = result.valid ? t('jira.queries.validationSuccessDetail') : result.errorMessage
-      
-      // @ts-expect-error - vue-toastification types issue
+
       toast[type](title + (message ? '\n' + message : ''))
     } catch (error) {
       toast.error(t('jira.queries.validationFailed'))

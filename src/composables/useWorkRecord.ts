@@ -88,7 +88,6 @@ export function useWorkRecord(options: UseWorkRecordOptions = {}) {
   const loadingWorkRecords = ref(false)
   const loadingDateStatuses = ref(false)
   const loadingSummary = ref(false)
-  // const savingWorkRecords = ref(false) // Unused - remove if not needed in future
   const error = ref<Error | null>(null)
 
   // Private state for caching

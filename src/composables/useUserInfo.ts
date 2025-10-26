@@ -56,12 +56,10 @@ export function useUserInfo(): UseUserInfoReturn {
   
   // Dependencies
   const { isAuthenticated, user: oktaUser } = useOktaAuth()
-  // const authStore = useAuthStore() // Unused - kept for future use
 
   // Cache management
   const CACHE_DURATION = 5 * 60 * 1000 // 5 minutes in milliseconds
   let fetchPromise: Promise<UserInfo | null> | null = null
-  // let retryCount = 0 // Unused - kept for future retry logic
   const maxRetries = 3
   const baseRetryDelay = 1000 // 1 second
   
@@ -124,7 +122,6 @@ export function useUserInfo(): UseUserInfoReturn {
       }
       
       console.log(`[useUserInfo] Successfully fetched user info:`, userData.username)
-      retryCount = 0 // Reset retry count on success
       return userData
       
     } catch (err: any) {
@@ -257,7 +254,6 @@ export function useUserInfo(): UseUserInfoReturn {
     userInfo.value = null
     lastUpdated.value = null
     error.value = null
-    retryCount = 0
     
     // Cancel ongoing fetch
     if (fetchPromise) {
