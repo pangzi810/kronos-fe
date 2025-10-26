@@ -158,10 +158,10 @@ export function useResponseTemplateEditor(options: UseResponseTemplateEditorOpti
       }
       
       return true
-      
+
     } catch (_error) {
       toast.error('テンプレートの保存に失敗しました')
-      console.error('Failed to save template:', error)
+      console.error('Failed to save template:', _error)
       return false
     } finally {
       saving.value = false
@@ -216,7 +216,7 @@ export function useResponseTemplateEditor(options: UseResponseTemplateEditorOpti
         errorMessage: 'テンプレートのテストに失敗しました',
         executionTimeMs: 0
       }
-      console.error('Template test failed:', error)
+      console.error('Template test failed:', _error)
     } finally {
       testing.value = false
     }
