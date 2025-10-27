@@ -46,7 +46,6 @@
 
         <!-- Settings section with collapsible JIRA menu -->
         <v-list-group 
-          v-can="'jira:write'"
           value="settings" fluid>
           <template v-slot:activator="{ props }">
             <v-list-item
@@ -58,7 +57,6 @@
 
         <!-- Users - Admin only -->
           <v-list-item
-          v-can="'users:read'"
           prepend-icon="mdi-account-multiple"
           :title="$t('navigation.users')"
           value="users"
@@ -67,7 +65,6 @@
 
         <!-- Projects - Admin/PMO only -->
         <v-list-item
-          v-can="'projects:read'"
           prepend-icon="mdi-folder"
           :title="$t('navigation.projects')"
           value="projects"
@@ -78,21 +75,11 @@
         <!-- JIRA Settings - Admin only -->
         <v-list-item
           prepend-icon="mdi-jira"
-          :title="$t('navigation.jiraSettings')"
-          v-can="'jira:write'">
+          :title="$t('navigation.jiraSettings')">
         </v-list-item>
-        <v-list-item
-          v-can="'jira:write'"
-          prepend-icon="mdi-connection"
-          :title="$t('navigation.jira.settings')"
-          value="jira-settings"
-          :to="{ name: 'jira-settings' }"
-          class="ml-4"
-        ></v-list-item>
 
         <!-- JIRA Sync History - PMO only -->
         <v-list-item
-          v-can="'jira:write'"
           prepend-icon="mdi-history"
           :title="$t('navigation.jira.history')"
           value="jira-history"
@@ -102,7 +89,6 @@
 
         <!-- JQL Settings - PMO only -->
         <v-list-item
-          v-can="'jira:write'"
           prepend-icon="mdi-database-search"
           :title="$t('navigation.jira.queries')"
           value="jira-queries"
@@ -112,7 +98,6 @@
 
         <!-- JIRA Response Template Settings - PMO only -->
         <v-list-item
-          v-can="'jira:write'"
           prepend-icon="mdi-file-document-edit"
           :title="$t('navigation.jira.templates')"
           value="jira-templates"
